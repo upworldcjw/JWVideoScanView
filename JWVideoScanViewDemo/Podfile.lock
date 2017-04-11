@@ -1,0 +1,16 @@
+PODS:
+  - JWVideoScanView (0.0.1)
+
+DEPENDENCIES:
+  - JWVideoScanView (from `..`)
+
+EXTERNAL SOURCES:
+  JWVideoScanView:
+    :path: ..
+
+SPEC CHECKSUMS:
+  JWVideoScanView: 585a12b1feb7fa498f0625a1f524ba7d44bdd8c3
+
+PODFILE CHECKSUM: 915f777c83c0c07cab1ecafb8ab4ddb722f41a66
+
+COCOAPODS: 1.2.0

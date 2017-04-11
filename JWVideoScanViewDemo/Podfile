@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'JWVideoScanViewDemo' do
+  # pod 'JWVideoScanView',:git => 'https://github.com/upworldcjw/JWVideoScanView.git'
+
+  pod 'JWVideoScanView',:path => '..'
+  # pod 'JWVideoScanView'
+
+end
