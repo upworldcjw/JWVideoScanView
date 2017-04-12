@@ -1,12 +1,12 @@
 
 Pod::Spec.new do |s|
   s.name     = 'JWVideoScanView'
-  s.version  = '0.0.1'
+  s.version  = '0.0.2'
   s.license  = 'MIT'
-  s.summary  = 'the animation for angle'
+  s.summary  = 'selcte image frame from video'
   s.homepage = 'https://github.com/upworldcjw'
   s.author   = { 'upowrld' => '1042294579@qq.com' }
-  s.source   = { :git => 'https://github.com/upworldcjw/JWVideoScanView.git', :tag => '0.0.1' }
+  s.source   = { :git => 'https://github.com/upworldcjw/JWVideoScanView.git', :tag => '0.0.2' }
   s.source_files = 'JWVideoScanView/*.{h,m,mm}'
   s.resource      = 'JWVideoScanView/JWVideoScanView.bundle'
   s.ios.frameworks = 'Foundation', 'UIKit','AVFoundation'
