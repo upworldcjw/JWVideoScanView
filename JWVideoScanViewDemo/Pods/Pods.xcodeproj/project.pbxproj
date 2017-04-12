@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15B23EE197E693FA26787B6D09874704 /* JWVideoScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = 76EBCB8907A07CEFCF624D64B844C9CD /* JWVideoScanView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32BB04C409DAA8E215F782917B65FA1A /* JWVideoScanView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDF10449F02208D5BC713856A6955E4 /* JWVideoScanView-dummy.m */; };
-		41F9C21EC63B87744BA5BE86F0D67475 /* JWVideoScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 082BA95FC069D3963DED14D979135AC4 /* JWVideoScanView.m */; };
-		4AA135FC3C67BA0E9FCB6B38A3655D4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1310D6EC5D51D33497F7499F9F52BB7 /* Foundation.framework */; };
-		57E60FBA7870AC36AB5B95BC7E832403 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DF7486DA9C7ACBFB36F83764720A59 /* UIKit.framework */; };
-		7FAAF3088E9F52FE62282B03B6DAD646 /* JWVideoSelectedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D1929C59E83ABFC2C29B1405D72229A /* JWVideoSelectedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EDD3499B140976BD0B806FDB62E0E9C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FEE101CACF7AC0906D397660A526AB /* AVFoundation.framework */; };
-		EA6DDC51FEE1AC7B364CFE121A63379D /* JWVideoSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9AC8FF5A8245E70DB306C89876CA2A /* JWVideoSelectedView.m */; };
+		017ECF14B81EE46B285379AECCA21D68 /* UIImage+JWVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 21B27CAA6EDFA085CFFE8C1BB54C2873 /* UIImage+JWVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F92EC55CDAD35AFCD05251D60B8A972 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DF7486DA9C7ACBFB36F83764720A59 /* UIKit.framework */; };
+		7EE8E859FBBE637F75D95146177C2D0B /* JWVideoScanDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75020264E464B325EB4F977AF8AC47A0 /* JWVideoScanDetailView.m */; };
+		8674918EACB25136306E21B28E8C18EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1310D6EC5D51D33497F7499F9F52BB7 /* Foundation.framework */; };
+		8B7586A497F7BA0F58987A7A597C699B /* JWVideoSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 458EACCA10CD3FB5B85A573E0195CE2F /* JWVideoSelectedView.m */; };
+		974AC53D362FFA1DCC6C8F0905508520 /* JWVideoSelectedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 187AB4F66A6D0BD58FB5319DAD408792 /* JWVideoSelectedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACF780487B47E2A274D87C766B882C8B /* JWVideoScanDetailView.h in Headers */ = {isa = PBXBuildFile; fileRef = 89E8CBFD99AC99701BA6D39F5896A3D9 /* JWVideoScanDetailView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7D2C9DBCCBABC0290551C6EDC523003 /* JWVideoScanView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C408BA878FCF74B357EA0935C6E340 /* JWVideoScanView-dummy.m */; };
+		D406D81F240438AF87EB07617D5F25E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FEE101CACF7AC0906D397660A526AB /* AVFoundation.framework */; };
+		EA93D56875E96FBBFDAC03CCF5ECFC6A /* JWVideoScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1728A2786091E076C0D2DDE67C61B16F /* JWVideoScanView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB4EC716504EAD500F85267A6BCDC76A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1310D6EC5D51D33497F7499F9F52BB7 /* Foundation.framework */; };
 		ECCB3EF5DBB9ACA5C39B6B66F8E0A733 /* Pods-JWVideoScanViewDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C612E882186677B1F1B973F591E70A /* Pods-JWVideoScanViewDemo-dummy.m */; };
+		F869874382280FBDE7F8DFBE0A7ECDFF /* UIImage+JWVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 19793EC2213DED74DC63F43A4F25A2CE /* UIImage+JWVideo.m */; };
+		FC662EC9696E7B8F0CC1B6E7D23E7396 /* JWVideoScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B81DFAF3E5E07344C7BD6AD4B0832AF /* JWVideoScanView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,33 +28,37 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 53E4D7A7DEB93F035507F0B20A8A9DFC;
+			remoteGlobalIDString = 85114ED290AAC98FE47F3EC21295CD0B;
 			remoteInfo = JWVideoScanView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01DF7486DA9C7ACBFB36F83764720A59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		082BA95FC069D3963DED14D979135AC4 /* JWVideoScanView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JWVideoScanView.m; sourceTree = "<group>"; };
 		11C612E882186677B1F1B973F591E70A /* Pods-JWVideoScanViewDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JWVideoScanViewDemo-dummy.m"; sourceTree = "<group>"; };
-		12F64CB75E1562E80008AD12C1FA8DDC /* JWVideoScanView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWVideoScanView.xcconfig; sourceTree = "<group>"; };
-		14C443F23BD4D3154A19C732A80A0FBA /* JWVideoScanView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWVideoScanView-prefix.pch"; sourceTree = "<group>"; };
-		189A7AC39657403A272D1650EBFE620E /* JWVideoScanView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = JWVideoScanView.bundle; sourceTree = "<group>"; };
-		2EDF10449F02208D5BC713856A6955E4 /* JWVideoScanView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JWVideoScanView-dummy.m"; sourceTree = "<group>"; };
+		13C408BA878FCF74B357EA0935C6E340 /* JWVideoScanView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JWVideoScanView-dummy.m"; sourceTree = "<group>"; };
+		1728A2786091E076C0D2DDE67C61B16F /* JWVideoScanView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JWVideoScanView.h; sourceTree = "<group>"; };
+		187AB4F66A6D0BD58FB5319DAD408792 /* JWVideoSelectedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JWVideoSelectedView.h; sourceTree = "<group>"; };
+		19793EC2213DED74DC63F43A4F25A2CE /* UIImage+JWVideo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JWVideo.m"; sourceTree = "<group>"; };
+		21B27CAA6EDFA085CFFE8C1BB54C2873 /* UIImage+JWVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWVideo.h"; sourceTree = "<group>"; };
+		2B81DFAF3E5E07344C7BD6AD4B0832AF /* JWVideoScanView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JWVideoScanView.m; sourceTree = "<group>"; };
+		458EACCA10CD3FB5B85A573E0195CE2F /* JWVideoSelectedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JWVideoSelectedView.m; sourceTree = "<group>"; };
 		5FCB74B79AFA66443BE33C94711D30EA /* Pods-JWVideoScanViewDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JWVideoScanViewDemo-frameworks.sh"; sourceTree = "<group>"; };
-		6D1929C59E83ABFC2C29B1405D72229A /* JWVideoSelectedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JWVideoSelectedView.h; sourceTree = "<group>"; };
 		72FEE101CACF7AC0906D397660A526AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		76EBCB8907A07CEFCF624D64B844C9CD /* JWVideoScanView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JWVideoScanView.h; sourceTree = "<group>"; };
-		78F4A3755DF87459B4A257C078B37BE9 /* libPods-JWVideoScanViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-JWVideoScanViewDemo.a"; path = "libPods-JWVideoScanViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75020264E464B325EB4F977AF8AC47A0 /* JWVideoScanDetailView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JWVideoScanDetailView.m; sourceTree = "<group>"; };
+		78F4A3755DF87459B4A257C078B37BE9 /* libPods-JWVideoScanViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWVideoScanViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7971D2EE7C0559CA3672E1384B1BD0F6 /* Pods-JWVideoScanViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWVideoScanViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7D424FA1EC4D458E38B5F97729FABBEE /* JWVideoScanView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWVideoScanView.xcconfig; sourceTree = "<group>"; };
 		845BE017E239B88A2DC5DA13F0D52835 /* Pods-JWVideoScanViewDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWVideoScanViewDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		89E8CBFD99AC99701BA6D39F5896A3D9 /* JWVideoScanDetailView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JWVideoScanDetailView.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C53B5B40EFA3229A5A864959558A092 /* Pods-JWVideoScanViewDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JWVideoScanViewDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AB553A09E0693C068AF87D6E50B614E6 /* JWVideoScanView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWVideoScanView-prefix.pch"; sourceTree = "<group>"; };
+		B44D2369FA66BA3F4DB1CB3FCD8EE763 /* JWVideoScanView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = JWVideoScanView.bundle; sourceTree = "<group>"; };
 		C1310D6EC5D51D33497F7499F9F52BB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D01F9879AFDC7464F5C6B99B77AB21FF /* Pods-JWVideoScanViewDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JWVideoScanViewDemo-resources.sh"; sourceTree = "<group>"; };
 		D468CF7984FCEF14799E21B3C86558E5 /* Pods-JWVideoScanViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWVideoScanViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		E273A6097B6B7AFC3C4F186561D1E9C6 /* libJWVideoScanView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJWVideoScanView.a; path = libJWVideoScanView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD9AC8FF5A8245E70DB306C89876CA2A /* JWVideoSelectedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JWVideoSelectedView.m; sourceTree = "<group>"; };
+		E273A6097B6B7AFC3C4F186561D1E9C6 /* libJWVideoScanView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJWVideoScanView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13CAF51EB44662241CC93F5365176F43 /* Frameworks */ = {
+		A8130D85514B32CEF48024DF856C332C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EDD3499B140976BD0B806FDB62E0E9C /* AVFoundation.framework in Frameworks */,
-				4AA135FC3C67BA0E9FCB6B38A3655D4E /* Foundation.framework in Frameworks */,
-				57E60FBA7870AC36AB5B95BC7E832403 /* UIKit.framework in Frameworks */,
+				D406D81F240438AF87EB07617D5F25E1 /* AVFoundation.framework in Frameworks */,
+				8674918EACB25136306E21B28E8C18EB /* Foundation.framework in Frameworks */,
+				2F92EC55CDAD35AFCD05251D60B8A972 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,15 +98,6 @@
 			path = "Target Support Files/Pods-JWVideoScanViewDemo";
 			sourceTree = "<group>";
 		};
-		03D7BC23E8879A67312E0A25EA57B453 /* JWVideoScanView */ = {
-			isa = PBXGroup;
-			children = (
-				189A7AC39657403A272D1650EBFE620E /* JWVideoScanView.bundle */,
-			);
-			name = JWVideoScanView;
-			path = JWVideoScanView;
-			sourceTree = "<group>";
-		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +109,25 @@
 		1CE16A702853D24CE494323B05F05D58 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC457B1AD86F37903BF176A64F2DB6A6 /* JWVideoScanView */,
+				8C0766C53C8E110CBF2DC1682645C381 /* JWVideoScanView */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2C12E614BAA52FC0F26CD67F4D56EFF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D03F284AB13438A9E6C0931A323C294 /* JWVideoScanView */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3D03F284AB13438A9E6C0931A323C294 /* JWVideoScanView */ = {
+			isa = PBXGroup;
+			children = (
+				B44D2369FA66BA3F4DB1CB3FCD8EE763 /* JWVideoScanView.bundle */,
+			);
+			path = JWVideoScanView;
 			sourceTree = "<group>";
 		};
 		44C52290D0B9AB64523AF5A4370FF9B8 /* Products */ = {
@@ -124,23 +139,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5277498949D216C427986B0EEF1DB051 /* Support Files */ = {
+		4F51B93E1FE57FD2FB6DA3F50F008A69 /* JWVideoScanView */ = {
 			isa = PBXGroup;
 			children = (
-				12F64CB75E1562E80008AD12C1FA8DDC /* JWVideoScanView.xcconfig */,
-				2EDF10449F02208D5BC713856A6955E4 /* JWVideoScanView-dummy.m */,
-				14C443F23BD4D3154A19C732A80A0FBA /* JWVideoScanView-prefix.pch */,
+				89E8CBFD99AC99701BA6D39F5896A3D9 /* JWVideoScanDetailView.h */,
+				75020264E464B325EB4F977AF8AC47A0 /* JWVideoScanDetailView.m */,
+				1728A2786091E076C0D2DDE67C61B16F /* JWVideoScanView.h */,
+				2B81DFAF3E5E07344C7BD6AD4B0832AF /* JWVideoScanView.m */,
+				187AB4F66A6D0BD58FB5319DAD408792 /* JWVideoSelectedView.h */,
+				458EACCA10CD3FB5B85A573E0195CE2F /* JWVideoSelectedView.m */,
+				21B27CAA6EDFA085CFFE8C1BB54C2873 /* UIImage+JWVideo.h */,
+				19793EC2213DED74DC63F43A4F25A2CE /* UIImage+JWVideo.m */,
 			);
-			name = "Support Files";
-			path = "JWVideoScanViewDemo/Pods/Target Support Files/JWVideoScanView";
-			sourceTree = "<group>";
-		};
-		65882F86B12F1D9177434585ABB23BC2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				03D7BC23E8879A67312E0A25EA57B453 /* JWVideoScanView */,
-			);
-			name = Resources;
+			path = JWVideoScanView;
 			sourceTree = "<group>";
 		};
 		6F636F190E8358172B07A737059AF70D /* iOS */ = {
@@ -164,24 +175,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		AB12A8767DACDFE4D0D14983830321F8 /* JWVideoScanView */ = {
+		8C0766C53C8E110CBF2DC1682645C381 /* JWVideoScanView */ = {
 			isa = PBXGroup;
 			children = (
-				76EBCB8907A07CEFCF624D64B844C9CD /* JWVideoScanView.h */,
-				082BA95FC069D3963DED14D979135AC4 /* JWVideoScanView.m */,
-				6D1929C59E83ABFC2C29B1405D72229A /* JWVideoSelectedView.h */,
-				FD9AC8FF5A8245E70DB306C89876CA2A /* JWVideoSelectedView.m */,
-			);
-			name = JWVideoScanView;
-			path = JWVideoScanView;
-			sourceTree = "<group>";
-		};
-		CC457B1AD86F37903BF176A64F2DB6A6 /* JWVideoScanView */ = {
-			isa = PBXGroup;
-			children = (
-				AB12A8767DACDFE4D0D14983830321F8 /* JWVideoScanView */,
-				65882F86B12F1D9177434585ABB23BC2 /* Resources */,
-				5277498949D216C427986B0EEF1DB051 /* Support Files */,
+				4F51B93E1FE57FD2FB6DA3F50F008A69 /* JWVideoScanView */,
+				2C12E614BAA52FC0F26CD67F4D56EFF6 /* Resources */,
+				DDB7FDA18E93C5C2E06B3659AB2C9752 /* Support Files */,
 			);
 			name = JWVideoScanView;
 			path = ../..;
@@ -195,28 +194,41 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		DDB7FDA18E93C5C2E06B3659AB2C9752 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D424FA1EC4D458E38B5F97729FABBEE /* JWVideoScanView.xcconfig */,
+				13C408BA878FCF74B357EA0935C6E340 /* JWVideoScanView-dummy.m */,
+				AB553A09E0693C068AF87D6E50B614E6 /* JWVideoScanView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "JWVideoScanViewDemo/Pods/Target Support Files/JWVideoScanView";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		726BC28925132D5A7C32030F8D8510CE /* Headers */ = {
+		FD12A58A994475142ACE520E75AC0D7B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15B23EE197E693FA26787B6D09874704 /* JWVideoScanView.h in Headers */,
-				7FAAF3088E9F52FE62282B03B6DAD646 /* JWVideoSelectedView.h in Headers */,
+				ACF780487B47E2A274D87C766B882C8B /* JWVideoScanDetailView.h in Headers */,
+				EA93D56875E96FBBFDAC03CCF5ECFC6A /* JWVideoScanView.h in Headers */,
+				974AC53D362FFA1DCC6C8F0905508520 /* JWVideoSelectedView.h in Headers */,
+				017ECF14B81EE46B285379AECCA21D68 /* UIImage+JWVideo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		53E4D7A7DEB93F035507F0B20A8A9DFC /* JWVideoScanView */ = {
+		85114ED290AAC98FE47F3EC21295CD0B /* JWVideoScanView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2DA74BAC92FAA840DBEB36C676BAC4D4 /* Build configuration list for PBXNativeTarget "JWVideoScanView" */;
+			buildConfigurationList = 972ED40E3B2D8974FF48C803C9EF985F /* Build configuration list for PBXNativeTarget "JWVideoScanView" */;
 			buildPhases = (
-				B78CD2986C58120789835B59B42742A4 /* Sources */,
-				13CAF51EB44662241CC93F5365176F43 /* Frameworks */,
-				726BC28925132D5A7C32030F8D8510CE /* Headers */,
+				5E7ECE6C3D553D4CEFB7B6BDF521967F /* Sources */,
+				A8130D85514B32CEF48024DF856C332C /* Frameworks */,
+				FD12A58A994475142ACE520E75AC0D7B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -265,7 +277,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53E4D7A7DEB93F035507F0B20A8A9DFC /* JWVideoScanView */,
+				85114ED290AAC98FE47F3EC21295CD0B /* JWVideoScanView */,
 				DAACD590ED0F7A07D364996F12879848 /* Pods-JWVideoScanViewDemo */,
 			);
 		};
@@ -280,13 +292,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B78CD2986C58120789835B59B42742A4 /* Sources */ = {
+		5E7ECE6C3D553D4CEFB7B6BDF521967F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32BB04C409DAA8E215F782917B65FA1A /* JWVideoScanView-dummy.m in Sources */,
-				41F9C21EC63B87744BA5BE86F0D67475 /* JWVideoScanView.m in Sources */,
-				EA6DDC51FEE1AC7B364CFE121A63379D /* JWVideoSelectedView.m in Sources */,
+				7EE8E859FBBE637F75D95146177C2D0B /* JWVideoScanDetailView.m in Sources */,
+				B7D2C9DBCCBABC0290551C6EDC523003 /* JWVideoScanView-dummy.m in Sources */,
+				FC662EC9696E7B8F0CC1B6E7D23E7396 /* JWVideoScanView.m in Sources */,
+				8B7586A497F7BA0F58987A7A597C699B /* JWVideoSelectedView.m in Sources */,
+				F869874382280FBDE7F8DFBE0A7ECDFF /* UIImage+JWVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +310,7 @@
 		88B0917F13651726E7CCBA0014C8523E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JWVideoScanView;
-			target = 53E4D7A7DEB93F035507F0B20A8A9DFC /* JWVideoScanView */;
+			target = 85114ED290AAC98FE47F3EC21295CD0B /* JWVideoScanView */;
 			targetProxy = 8B455C9F51E431569748F40C87D1E1A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -369,9 +383,9 @@
 			};
 			name = Release;
 		};
-		2958B433B9AD320CA242E23C26487C33 /* Debug */ = {
+		2BF04DFAE87A196A88E77A4EB71E0D0C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12F64CB75E1562E80008AD12C1FA8DDC /* JWVideoScanView.xcconfig */;
+			baseConfigurationReference = 7D424FA1EC4D458E38B5F97729FABBEE /* JWVideoScanView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -415,29 +429,6 @@
 			};
 			name = Debug;
 		};
-		3FBD8B54014CC2AFA20B1222D49E9F6A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12F64CB75E1562E80008AD12C1FA8DDC /* JWVideoScanView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JWVideoScanView/JWVideoScanView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -478,6 +469,29 @@
 			};
 			name = Release;
 		};
+		96373ADE2DCF14A0348E3F515F4377BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D424FA1EC4D458E38B5F97729FABBEE /* JWVideoScanView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JWVideoScanView/JWVideoScanView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,11 +504,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2DA74BAC92FAA840DBEB36C676BAC4D4 /* Build configuration list for PBXNativeTarget "JWVideoScanView" */ = {
+		972ED40E3B2D8974FF48C803C9EF985F /* Build configuration list for PBXNativeTarget "JWVideoScanView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2958B433B9AD320CA242E23C26487C33 /* Debug */,
-				3FBD8B54014CC2AFA20B1222D49E9F6A /* Release */,
+				2BF04DFAE87A196A88E77A4EB71E0D0C /* Debug */,
+				96373ADE2DCF14A0348E3F515F4377BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

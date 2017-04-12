@@ -6,16 +6,16 @@
 //  Copyright © 2017年 MeeLive. All rights reserved.
 //
 
-#import "UIImage+IKVideo.h"
+#import "UIImage+JWVideo.h"
 
-@implementation UIImage (IKVideo)
+@implementation UIImage (JWVideo)
 
-+ (nullable UIImage *)ik_fristFrameImageForFilePath:(NSString *)path{
++ (nullable UIImage *)jw_fristFrameImageForFilePath:(NSString *)path{
     AVURLAsset *urlAsset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:path]];
-    return [self ik_fristFrameImageForUrlAsset:urlAsset];
+    return [self jw_fristFrameImageForUrlAsset:urlAsset];
 }
 
-+ (nullable UIImage *)ik_fristFrameImageForUrlAsset:(AVURLAsset *)asset{
++ (nullable UIImage *)jw_fristFrameImageForUrlAsset:(AVURLAsset *)asset{
     AVAssetImageGenerator *imageGenerator = [AVAssetImageGenerator assetImageGeneratorWithAsset:asset];
     imageGenerator.appliesPreferredTrackTransform = YES;
     imageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
@@ -35,14 +35,14 @@
 }
 
 
-+ (nullable UIImage *)ik_imageAtSeconds:(CGFloat)second
++ (nullable UIImage *)jw_imageAtSeconds:(CGFloat)second
                                    size:(CGSize)size
                                forAsset:(nonnull AVURLAsset *)asset{
     CMTime time = CMTimeMake(second, asset.duration.timescale);
-    return [self ik_imageAtTime:time size:size forAsset:asset];
+    return [self jw_imageAtTime:time size:size forAsset:asset];
 }
 
-+ (nullable UIImage *)ik_imageAtTime:(CMTime)time
++ (nullable UIImage *)jw_imageAtTime:(CMTime)time
                                 size:(CGSize)size
                             forAsset:(nonnull AVURLAsset *)asset{
     

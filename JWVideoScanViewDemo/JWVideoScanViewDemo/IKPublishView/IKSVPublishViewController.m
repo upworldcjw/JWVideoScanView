@@ -10,9 +10,10 @@
 #import "IKSVPublishBottomView.h"
 #import "IKSVPublishTopView.h"
 #import "IKSVPublishTextEidtView.h"
-#import "UIImage+IKVideo.h"
 #import "UIColor+help.h"
 #import "JWVideoScanView.h"
+#import "JWVideoScanDetailView.h"
+#import "PublishImageViewController.h"
 @import AVFoundation;
 @import MobileCoreServices;
 
@@ -26,16 +27,14 @@
 @property (strong, nonatomic) UIButton *trimButton;
 #endif
 
-@property (strong, nonatomic) UIImageView *renderImgView;
 @property (strong, nonatomic) AVURLAsset *asset;
-@property (strong, nonatomic) UIView *videoBgView;
-@property (strong, nonatomic) AVPlayer *player;
-@property (strong, nonatomic) AVPlayerLayer *playerLayer;
+@property (strong, nonatomic) JWVideoScanDetailView *detailView;
 @property (strong, nonatomic) IKSVPublishBottomView *bottomView;
 @property (strong, nonatomic) IKSVPublishTopView    *topView;
 @property (strong, nonatomic) JWVideoScanView     *trimmerView;
 @property (strong, nonatomic) IKSVPublishTextEidtView *editView;
 @property (strong, nonatomic) NSString *videoUrl;
+
 @end
 
 @implementation IKSVPublishViewController
@@ -49,6 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     self.view.backgroundColor = [UIColor colorWithHexString:@"333333"];
 #ifdef kTestPhotoLib
     self.tempVideoPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"tmpMov.mov"];
@@ -117,29 +117,19 @@
     CGFloat videoRation = properRation;
     CGFloat maxWidth = self.view.bounds.size.width - 2*leftMargin;
     CGFloat maxHeight =  CGRectGetMinY(self.trimmerView.frame) - 20 - CGRectGetMaxY(self.topView.frame);
-    
-    CGFloat needHeight = maxHeight;
-    CGFloat needWidth = needHeight * videoRation;
-    if (needWidth > maxWidth) {
-        needWidth = maxWidth;
-        needHeight = needWidth / videoRation;
-    }
+    CGSize properSize = [JWVideoScanDetailView properSizeForRation:videoRation
+                                                  maxAvaliableSize:CGSizeMake(maxWidth, maxHeight)];
+    CGFloat needHeight = properSize.height;
+    CGFloat needWidth = properSize.width;
     
     leftMargin = (self.view.bounds.size.width - needWidth)/2.0;
     
-    self.videoBgView = [[UIView alloc] initWithFrame:CGRectMake(leftMargin, CGRectGetMaxY(self.topView.frame), needWidth, needHeight)];
-    [self.view addSubview:self.videoBgView];
-//    self.videoBgView.backgroundColor = [UIColor redColor];
-    
-    AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:self.asset];
-    self.player = [AVPlayer playerWithPlayerItem:item];
-    self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-//    self.playerLayer.contentsGravity = AVLayerVideoGravityResizeAspectFill;
-    self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    self.player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
-    self.playerLayer.frame = self.videoBgView.bounds;
-    [self.videoBgView.layer addSublayer:self.playerLayer];
-    
+    CGRect frame = CGRectMake(leftMargin, CGRectGetMaxY(self.topView.frame), needWidth, needHeight);
+    JWVideoScanDetailView *detailView = [[JWVideoScanDetailView alloc] initWithAsset:self.asset];
+    detailView.frame = frame;
+    [self.view addSubview:detailView];
+    self.detailView = detailView;
+
     //根据图片的宽度，布局trimmerView 和 bottomView 的高度
 //    CGRect frame = self.trimmerView.frame;
 //    frame.origin.x = leftMargin;
@@ -152,14 +142,14 @@
 }
 
 - (void)loadEidtViewWithStyle:(IKSVPublishTextEiditStyle)style{
-    self.editView = [[IKSVPublishTextEidtView alloc] initWithWidth:self.videoBgView.frame.size.width
+    self.editView = [[IKSVPublishTextEidtView alloc] initWithWidth:self.detailView.frame.size.width
                                                          textStyle:style];
     self.editView.textView.placeholder = @"输入标题...";
     self.editView.textView.placeholderColor = [UIColor whiteColor];
-    [self.videoBgView addSubview:self.editView];
+    [self.detailView addSubview:self.editView];
 //    [self.editView editViewBecomeFirstResponder];
     
-    CGRect rect = self.videoBgView.bounds;
+    CGRect rect = self.detailView.bounds;
     //        CGFloat ration = [UIScreen mainScreen].bounds.size.width/414;
     CGFloat ration= 1;
     rect.origin.y = 50 * ration;
@@ -167,7 +157,7 @@
     rect.size.height = height;
     self.editView.showInRect = rect;
     
-    self.editView.center = CGPointMake(self.videoBgView.bounds.size.width/2.0, CGRectGetMaxY(rect)- CGRectGetHeight(self.editView.bounds));
+    self.editView.center = CGPointMake(self.detailView.bounds.size.width/2.0, CGRectGetMaxY(rect)- CGRectGetHeight(self.editView.bounds));
 }
 
 
@@ -186,34 +176,20 @@
 - (void)publish{
     [self.editView editViewResignFirstResponder];
 
-    UIImage *image = [self getImageAtSeconds:0 size:CGSizeZero];
-    //#ifdef kTestRenderImageView
-    self.renderImgView = [[UIImageView alloc] initWithFrame:self.videoBgView.frame];
-    self.renderImgView.clipsToBounds = YES;
-    self.renderImgView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.view addSubview:self.renderImgView];
-    [self.renderImgView setImage:image];
-    //#endif
-
-    CGSize size = self.videoBgView.frame.size;
+    CGSize size = self.detailView.frame.size;
     UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [self.renderImgView.layer renderInContext:context];
+    [self.detailView renderInContext:context];
     if ([self.editView.textView.text length] != 0) {//有录入文字
-        [self.videoBgView.layer renderInContext:context];
+        [self.detailView.layer renderInContext:context];
     }
-    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
-    //录制的时候状态条被隐藏，消失的时候需要显示
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-}
-
-
--(UIImage *)getImageAtSeconds:(CGFloat)second size:(CGSize)size{
-    CMTime time = [[self.player currentItem] currentTime];
-    return [UIImage ik_imageAtTime:time size:size forAsset:self.asset];
+    PublishImageViewController *publishVC = [[PublishImageViewController alloc] initWithImage:image];
+    [self presentViewController:publishVC
+                       animated:YES
+                     completion:NULL];
 }
 
 - (void)back{
@@ -237,7 +213,7 @@
 #pragma mark - JWVideoScanViewDelegate
 
 - (void)videoScanView:(nonnull JWVideoScanView *)trimmerView moveToTime:(CMTime)startTime{
-    [self.player seekToTime:startTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+    [self.detailView seekToTime:startTime];
 }
 
 //点击选择帧回调

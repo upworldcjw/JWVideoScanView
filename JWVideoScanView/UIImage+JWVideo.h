@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface UIImage (IKVideo)
+@interface UIImage (JWVideo)
 
-+ (nullable UIImage *)ik_fristFrameImageForFilePath:(nonnull NSString *)path;
++ (nullable UIImage *)jw_fristFrameImageForFilePath:(nonnull NSString *)path;
 
-+ (nullable UIImage *)ik_fristFrameImageForUrlAsset:(nonnull AVURLAsset *)asset;
++ (nullable UIImage *)jw_fristFrameImageForUrlAsset:(nonnull AVURLAsset *)asset;
 
 
 /**
@@ -23,7 +23,7 @@
  @param size 尺寸
  @return image
  */
-+ (nullable UIImage *)ik_imageAtSeconds:(CGFloat)second size:(CGSize)size forAsset:(nonnull AVURLAsset *)asset;
++ (nullable UIImage *)jw_imageAtSeconds:(CGFloat)second size:(CGSize)size forAsset:(nonnull AVURLAsset *)asset;
 
 
 /**
@@ -33,7 +33,7 @@
  @param size CGSize
  @return image
  */
-+ (nullable UIImage *)ik_imageAtTime:(CMTime)time
++ (nullable UIImage *)jw_imageAtTime:(CMTime)time
                                 size:(CGSize)size
                             forAsset:(nonnull AVURLAsset *)asset;
 

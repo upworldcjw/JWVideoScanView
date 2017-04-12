@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63E2134FBE13DC0A2219D6FF /* libPods-JWVideoScanViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E025D11B9D9094D513C914F /* libPods-JWVideoScanViewDemo.a */; };
+		7B07C40C1E9DCE9E00A03461 /* PublishImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B07C40B1E9DCE9E00A03461 /* PublishImageViewController.m */; };
 		7B4E665E1E9D0E9300DB7785 /* IKSVPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E66411E9D0E9300DB7785 /* IKSVPublishViewController.m */; };
 		7B4E665F1E9D0E9300DB7785 /* iksv_publish_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B4E66431E9D0E9300DB7785 /* iksv_publish_back@2x.png */; };
 		7B4E66601E9D0E9300DB7785 /* iksv_publish_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B4E66441E9D0E9300DB7785 /* iksv_publish_back@3x.png */; };
@@ -22,7 +23,6 @@
 		7B4E66691E9D0E9300DB7785 /* IKSVPublishTextEidtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E66511E9D0E9300DB7785 /* IKSVPublishTextEidtView.m */; };
 		7B4E666A1E9D0E9300DB7785 /* IKSVPublishTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E66531E9D0E9300DB7785 /* IKSVPublishTopView.m */; };
 		7B4E666B1E9D0E9300DB7785 /* UIColor+help.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E66561E9D0E9300DB7785 /* UIColor+help.m */; };
-		7B4E666C1E9D0E9300DB7785 /* UIImage+IKVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E66581E9D0E9300DB7785 /* UIImage+IKVideo.m */; };
 		7B4E666D1E9D0E9300DB7785 /* XNHPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E665B1E9D0E9300DB7785 /* XNHPGrowingTextView.m */; };
 		7B4E666E1E9D0E9300DB7785 /* XNHPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E665D1E9D0E9300DB7785 /* XNHPTextViewInternal.m */; };
 		7B4E66711E9D0EA800DB7785 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E66701E9D0EA800DB7785 /* AppDelegate.m */; };
@@ -35,6 +35,8 @@
 		1E0B202C3CF0D70B884C6919 /* Pods-JWVideoScanViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWVideoScanViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWVideoScanViewDemo/Pods-JWVideoScanViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		2832EB893FB597272ABC646C /* Pods-JWVideoScanViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWVideoScanViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWVideoScanViewDemo/Pods-JWVideoScanViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2E025D11B9D9094D513C914F /* libPods-JWVideoScanViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWVideoScanViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B07C40A1E9DCE9E00A03461 /* PublishImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishImageViewController.h; sourceTree = "<group>"; };
+		7B07C40B1E9DCE9E00A03461 /* PublishImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishImageViewController.m; sourceTree = "<group>"; };
 		7B4E663D1E9D0E2A00DB7785 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = JWVideoScanViewDemo/Info.plist; sourceTree = "<group>"; };
 		7B4E66401E9D0E9300DB7785 /* IKSVPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSVPublishViewController.h; sourceTree = "<group>"; };
 		7B4E66411E9D0E9300DB7785 /* IKSVPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSVPublishViewController.m; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		7B4E66531E9D0E9300DB7785 /* IKSVPublishTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSVPublishTopView.m; sourceTree = "<group>"; };
 		7B4E66551E9D0E9300DB7785 /* UIColor+help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+help.h"; sourceTree = "<group>"; };
 		7B4E66561E9D0E9300DB7785 /* UIColor+help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+help.m"; sourceTree = "<group>"; };
-		7B4E66571E9D0E9300DB7785 /* UIImage+IKVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IKVideo.h"; sourceTree = "<group>"; };
-		7B4E66581E9D0E9300DB7785 /* UIImage+IKVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IKVideo.m"; sourceTree = "<group>"; };
 		7B4E665A1E9D0E9300DB7785 /* XNHPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNHPGrowingTextView.h; sourceTree = "<group>"; };
 		7B4E665B1E9D0E9300DB7785 /* XNHPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNHPGrowingTextView.m; sourceTree = "<group>"; };
 		7B4E665C1E9D0E9300DB7785 /* XNHPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNHPTextViewInternal.h; sourceTree = "<group>"; };
@@ -99,6 +99,8 @@
 				7B4E664B1E9D0E9300DB7785 /* SubViews */,
 				7B4E66541E9D0E9300DB7785 /* Utilities */,
 				7B4E66591E9D0E9300DB7785 /* XNHPGrowingTextView */,
+				7B07C40A1E9DCE9E00A03461 /* PublishImageViewController.h */,
+				7B07C40B1E9DCE9E00A03461 /* PublishImageViewController.m */,
 			);
 			name = IKPublishView;
 			path = JWVideoScanViewDemo/IKPublishView;
@@ -139,8 +141,6 @@
 			children = (
 				7B4E66551E9D0E9300DB7785 /* UIColor+help.h */,
 				7B4E66561E9D0E9300DB7785 /* UIColor+help.m */,
-				7B4E66571E9D0E9300DB7785 /* UIImage+IKVideo.h */,
-				7B4E66581E9D0E9300DB7785 /* UIImage+IKVideo.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B4E66671E9D0E9300DB7785 /* IKSVPublishBottomView.m in Sources */,
-				7B4E666C1E9D0E9300DB7785 /* UIImage+IKVideo.m in Sources */,
+				7B07C40C1E9DCE9E00A03461 /* PublishImageViewController.m in Sources */,
 				7B4E666D1E9D0E9300DB7785 /* XNHPGrowingTextView.m in Sources */,
 				7B4E666B1E9D0E9300DB7785 /* UIColor+help.m in Sources */,
 				7B4E666A1E9D0E9300DB7785 /* IKSVPublishTopView.m in Sources */,
